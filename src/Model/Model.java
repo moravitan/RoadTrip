@@ -8,8 +8,8 @@ public class Model extends Observable {
 
     private DBConnect usersDatebase = new DBConnect("Users");
 
-    public void Create (String userName, String password, String birthday, String firstName, String lastName, String address) {
-        String data = userName  + "," + password + "," +   birthday + "," + firstName + "," + lastName + "," + address;
+    public void Create (String userName, String password, String firstName, String lastName, String birthday, String address) {
+        String data = userName  + "," + password + "," + "," + firstName + "," + lastName + birthday + "," + address;
         usersDatebase.insertIntoTable("Users", data);
     }
 

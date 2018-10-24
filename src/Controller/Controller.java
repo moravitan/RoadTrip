@@ -18,6 +18,10 @@ public class Controller extends Observable implements Observer {
         this.model = model;
     }
 
+    public void create (String userName, String password, String birthday, String firstName, String lastName, String address) {
+        model.Create(userName,password,birthday,firstName,lastName,address);
+    }
+
     @Override
     public void update(Observable o, Object arg) {
 

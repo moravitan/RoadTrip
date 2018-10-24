@@ -2,6 +2,7 @@ package View;
 
 import Controller.Controller;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.util.Observable;
@@ -40,6 +41,20 @@ public class Create implements Observer {
         String birthday = String.valueOf(txtfld_Birthday.getText());
         String address = String.valueOf(txtfld_Address.getText());
 
+        if (!password.equals(confirmPassword)){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Oops..");
+            alert.setContentText("Password isn't matching");
+            alert.showAndWait();
+            alert.close();
+        }
+        else{
+            controller.create(userName,password,firstName,lastName,birthday,address);
+        }
 
+
+    }
+
+    public void cancel(ActionEvent actionEvent) {
     }
 }

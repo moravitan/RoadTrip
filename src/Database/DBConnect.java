@@ -45,9 +45,9 @@ public class DBConnect {
         String createStatement = "CREATE TABLE IF NOT EXISTS Users (\n"
                 + "	user_name text PRIMARY KEY,\n"
                 + "	password text NOT NULL,\n"
-                + "	birthday text,\n"
                 + "first_name text NOT NULL,\n"
                 + "last_name text NOT NULL,\n"
+                + "	birthday text,\n"
                 + "address text NOT NULL\n"
                 + ");";
 
@@ -65,7 +65,7 @@ public class DBConnect {
     public void insertIntoTable(String tableName, String data){
 
         String [] values = data.split(",");
-        String insertStatement = "INSERT INTO Users (user_name,password,birthday,first_name,last_name,address) VAlUES (?,?,?,?,?,?)";
+        String insertStatement = "INSERT INTO Users (user_name,password,first_name,last_name,birthday,address) VAlUES (?,?,?,?,?,?)";
 
         String url = "jdbc:sqlite:" + databaseName + ".db";
 
