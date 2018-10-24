@@ -16,8 +16,8 @@ public class Create implements Observer {
     public javafx.scene.control.TextField txtfld_password;
     public javafx.scene.control.TextField txtfld_confirmPassword;
     public javafx.scene.control.TextField txtfld_firstName;
-    public javafx.scene.control.TextField txtfld_LastName;
-    public javafx.scene.control.TextField txtfld_Birdthday;
+    public javafx.scene.control.TextField txtfld_lastName;
+    public javafx.scene.control.TextField txtfld_Birthday;
     public javafx.scene.control.TextField txtfld_Address;
 
 
@@ -36,8 +36,8 @@ public class Create implements Observer {
         String password = String.valueOf(txtfld_password.getText());
         String confirmPassword = String.valueOf(txtfld_confirmPassword.getText());
         String firstName = String.valueOf(txtfld_firstName.getText());
-        String lastName = String.valueOf(txtfld_LastName.getText());
-        String birthday = String.valueOf(txtfld_Birdthday.getText());
+        String lastName = String.valueOf(txtfld_lastName.getText());
+        String birthday = String.valueOf(txtfld_Birthday.getText());
         String address = String.valueOf(txtfld_Address.getText());
 
 
